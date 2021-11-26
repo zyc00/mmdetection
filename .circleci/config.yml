@@ -158,10 +158,10 @@ workflows:
           python: "3.9.0"
           requires:
             - lint
-      - build_cu101:
-          requires:
-            - build_cpu_th1.6
-            - build_cpu_th1.7
-            - build_cpu_th1.8_py3.9
-            - build_cpu_th1.9_py3.8
-            - build_cpu_th1.9_py3.9
+      - build_cu101
+          # requires:
+          #   - build_cpu_th1.6
+          #   - build_cpu_th1.7
+          #   - build_cpu_th1.8_py3.9
+          #   - build_cpu_th1.9_py3.8
+          #   - build_cpu_th1.9_py3.9

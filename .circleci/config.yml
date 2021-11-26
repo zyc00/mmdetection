@@ -65,7 +65,7 @@ jobs:
       - run:
           name: Run unittests
           command: |
-            coverage run --branch --source mmocr -m pytest tests/
+            coverage run --branch --source mmdet -m pytest tests/
             coverage xml
             coverage report -m
 

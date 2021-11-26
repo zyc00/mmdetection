@@ -5,16 +5,7 @@ jobs:
     docker:
       - image: cimg/python:3.7.4
     steps:
-      - checkout
-      - run:
-          name: Install ruby
-          command: |
-            curl -L https://get.rvm.io | bash -s -- --autolibs=read-fail
-            [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
-            rvm autolibs disable
-            rvm install 2.7.1    
-            rvm alias create default 'ruby=2.7.1'
-            source ~/.rvm/scripts/rvm         
+      - checkout    
       - run:
           name: Install pre-commit hook
           command: |

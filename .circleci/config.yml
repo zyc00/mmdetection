@@ -75,9 +75,9 @@ jobs:
       - run:
           name: Run unittests
           command: |
-            coverage run --branch --source mmdet -m pytest tests/
-            coverage xml
-            coverage report -m
+            pytest tests/
+            # coverage xml
+            # coverage report -m
 
   build_cu101:
     machine:

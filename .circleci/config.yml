@@ -57,7 +57,7 @@ jobs:
           command: |
             python -V
             pip install torch==<< parameters.torch >> torchvision==<< parameters.torchvision >> -f https://download.pytorch.org/whl/torch_stable.html
-      - when: 
+      - when:
           condition: <<parameters.python>>== '3.9.0'
           steps:
             - run: pip install protobuf && sudo apt-get update && sudo apt-get -y install libprotobuf-dev protobuf-compiler cmake

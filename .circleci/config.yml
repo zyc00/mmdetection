@@ -79,7 +79,6 @@ jobs:
             coverage run --branch --source mmdet -m pytest tests/
             coverage xml
             coverage report -m
-          no_output_timeout: 60m
 
   build_cu101:
     machine:

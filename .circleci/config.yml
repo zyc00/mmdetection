@@ -58,7 +58,7 @@ jobs:
             python -V
             pip install torch==<< parameters.torch >>+cpu torchvision==<< parameters.torchvision >>+cpu -f https://download.pytorch.org/whl/torch_stable.html
       - when:
-          condition: <<parameters.python>>== '3.9.0'
+          condition: <<parameters.python>> == “3.9.0”
           steps:
             - run: pip install protobuf && sudo apt-get update && sudo apt-get -y install libprotobuf-dev protobuf-compiler cmake
       - run:
@@ -149,7 +149,7 @@ workflows:
           name: build_cpu_th1.9_py3.8
           torch: 1.9.0
           torchvision: 0.10.0
-          # python: "3.7.0"
+          python: "3.8.12"
           # requires:
           #   - lint
       - build_cpu:
